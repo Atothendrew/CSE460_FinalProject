@@ -22,13 +22,13 @@ namespace CSE465_FinalProject.Models
             Queued, InProgress, Completed
         };
 
-        String ProjectName { get; }
-        int ProjectID { get; }
-        DateTime StartDate { get; }
-        DateTime ExpectedEndDate { get; }
-        int Status { set; }
-        TenantUser.Manager manager { get; }
-        TenantUser.Worker[] workers { get; }
+        String ProjectName { get; set; }
+        int ProjectID { get; set; }
+        DateTime StartDate { get; set; }
+        DateTime ExpectedEndDate { get; set; }
+        int Status { get; set; }
+        TenantUser.Manager manager { get; set; }
+        TenantUser.Worker[] workers { get; set; }
 
         public Project(String ProjectName, int ProjectID, DateTime StartDate, DateTime ExpectedEndDate, int Status, TenantUser.Manager manager, TenantUser.Worker[] workers)
         {
